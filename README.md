@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Crypto Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React dashboard for tracking cryptocurrencies, built with Zustand for state management and SWR for data fetching. Features include:
 
-## Available Scripts
+- **Live crypto data** from CoinGecko
+- **Search and filter** coins
+- **Add/remove favorites** (persisted in Zustand store)
+- **Favorites dashboard**
+- **Robust Jest test coverage** for all logic and UI
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- View top cryptocurrencies with real-time price and market data
+- Search coins by name
+- Add coins to your favorites list
+- Remove coins from favorites
+- Favorites are managed globally using Zustand
+- Data is fetched efficiently using SWR
+- Fully tested with Jest and React Testing Library
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- Zustand (state management)
+- SWR (data fetching)
+- Axios (HTTP requests)
+- React Router (navigation)
+- Jest & React Testing Library (testing)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Run the app:**
+   ```bash
+   npm start
+   ```
+   The app will be available at [http://localhost:3000](http://localhost:3000)
 
-### `npm run build`
+3. **Run tests:**
+   ```bash
+   npm test
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **View coverage report:**
+   ```bash
+   npm run test -- --coverage
+   # Open coverage/lcov-report/index.html in your browser
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+src/
+  App.js            # Main app component
+  AppRouter.js      # Routing setup
+  crypto/
+    AllCrypto.jsx   # All coins dashboard
+    FavCrypto.jsx   # Favorites dashboard
+  store/
+    favoriteStore.js # Zustand store for favorites
+  util/
+    CallCrypto.jsx  # SWR/axios data fetching hook
+  test/             # All Jest test files
+```
 
-### `npm run eject`
+## API
+- [CoinGecko Markets API](https://www.coingecko.com/en/api/documentation)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Author
+- [deeptechlearner](https://github.com/deeptechlearner)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Feel free to fork, contribute, or open issues!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To add new remote
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+git remote set-url origin https://github.com/deeptechlearner/zustand-useswr.git
+PS C:\ReactLearning\CryptoDashboard\crypto-dashboard> git push origin master
+Enumerating objects: 44, done.
+Counting objects: 100% (44/44), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (42/42), done.
+Writing objects: 100% (44/44), 182.07 KiB | 5.20 MiB/s, done.
+Total 44 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/deeptechlearner/zustand-useswr.git
+ * [new branch]      master -> master
